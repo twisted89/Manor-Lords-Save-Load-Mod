@@ -5,7 +5,7 @@ Source in this repo is a modified version of the free UnrealModUnlocker.
 The "mainMenu_widget.\*" files are required from the release download, the dll can be built from source or just copy the prebuilt one.  
 
 ## This mod is supplied as is, use at your own risk
-If you do encounter a crash while loading a save, create an issue and upload your crash logs from "%localappdata%\Saved\Crashes"
+If you do encounter a crash while loading a save, create an issue and upload your crash logs from "%localappdata%\ManorLords\Saved\Crashes"
 
 ## How to use:
 **Step 1:** Install UnrealModUnlocker from https://illusory.dev/ and patch Manor Lords Demo
