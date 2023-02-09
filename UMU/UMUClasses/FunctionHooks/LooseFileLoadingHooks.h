@@ -114,6 +114,35 @@ namespace LooseFileLoadingHooks
 		return Patch2_orig(p1, p2, p3);
 	}
 
+	typedef void* (*Patch3_Def)(intptr_t p1, int p2, int p3);
+	Patch3_Def Patch3_orig = nullptr;
+
+	void* __fastcall Patch3_hook(intptr_t p1, int p2, int p3)
+	{
+		auto v12 = *(intptr_t*)(p1 + 2112) + 144 * p2;
+		if (*(int*)v12 == p3 && *(int*)(v12 + 72) > 0)
+			return nullptr;
+		auto v13 = *(intptr_t**)(v12 + 128);
+		for (auto i = &v13[*(int*)(v12 + 136)]; v13 != i; ++v13)
+		{
+			if (v13 == 0 || *v13 == 0)
+				return nullptr;
+		}
+
+		return Patch3_orig(p1, p2, p3);
+	}
+
+	typedef void* (*Patch4_Def)(intptr_t p1);
+	Patch4_Def Patch4_orig = nullptr;
+
+	void* __fastcall Patch4_hook(intptr_t p1)
+	{
+		if (!p1)
+			return nullptr;
+
+		return Patch4_orig(p1);
+	}
+
 
 	// FindFileInPakFiles 2
 	typedef void* (*FindFileInPakFiles_2_ptr)(void* PakFile, void* Filename, void** FileEntry);
