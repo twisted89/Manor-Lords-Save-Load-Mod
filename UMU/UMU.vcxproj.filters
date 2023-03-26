@@ -132,6 +132,9 @@
     <ClInclude Include="UMUClasses\SigScanner\SigScanners\SigScanner_LooseFileLoader.h">
       <Filter>Header Files\UMUClasses\SigScanner\SigScanners</Filter>
     </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -170,10 +173,18 @@
     <ClCompile Include="UMUClasses\SigScanner\SigScanners\SigScanner_LooseFileLoader.cpp">
       <Filter>Source Files\UMUClasses\SigScanner\SigScanners</Filter>
     </ClCompile>
+    <ClCompile Include="Global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXGIProxy\proxy.def">
       <Filter>Source Files\DXGIProxy</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="Cave.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
